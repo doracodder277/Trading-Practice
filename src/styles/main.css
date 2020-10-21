@@ -1,0 +1,189 @@
+.table th{
+    text-align: center 
+}
+
+.table td {
+    text-align: center
+}
+
+.table {
+    margin-top: 0.75rem;
+}
+
+.container {
+    width: 40%
+}
+
+#login_signup {
+    display: flex;
+    justify-content: space-around
+}
+
+#search_box_view {
+    margin-top: 2rem;
+}
+
+.view_list li span {
+    font-weight: 600
+}
+
+#chart {
+    margin: 0 auto;
+    width: 120%;
+    transform: translateX(-12%) translateY(-1rem)
+}
+
+#view_title {
+    padding-top: 2rem;
+}
+
+#github {
+    display: flex;
+}
+
+#currPrice {
+    padding: 0px 5px;
+    border: 1px black solid;
+    background: black;
+    color: white;
+    font-weight: 300;
+}
+
+#github img {
+    padding-right: 0.4rem;
+}
+
+.view_list {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.view_list li {
+    display: flex;
+    text-align: left;
+    justify-content: space-between
+}
+
+#arrow {
+    vertical-align: baseline;
+    padding-left: 0.5rem;
+}
+
+#status_label {
+    padding-right: 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.react-autosuggest__container{
+    box-shadow: 0px 0px 12px 1px rgba(10,10,10,.1);
+}
+
+.react-autosuggest__input {
+    background: #ffffff;
+    width: 100%;
+    line-height: 2rem;
+    border: 1px #dbdbdb solid;
+    padding-left: 0.6rem;
+    font-size: 1rem;
+    
+}
+
+.react-autosuggest__input::placeholder {
+    color: rgba(10,10,10, 0.3);
+}
+
+.react-autosuggest__input:focus {
+    outline: outset 1px #3273DC solid;
+}
+
+.react-autosuggest__suggestion {
+    padding: 0.25rem 0rem 0.25rem 0.6rem;
+}
+
+.react-autosuggest__suggestion--highlighted {
+    background: rgba(230, 230, 230, 0.6);
+}
+
+.leaderboard {
+    width: 40%;
+    margin-top: 2rem;
+    user-select: none;
+}
+
+.leaderboard_loader {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+#close {
+    border: 1px red solid;
+    color: red;
+    padding: 0.5rem;
+    font-weight: 600
+}
+
+#open {
+    border: 1px green solid;
+    color: green;
+    padding: 0.5rem;
+    font-weight: 600
+}
+
+#loginactive, #signupactive {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+#login {
+    margin-top: 10%;
+    width: 30%;
+}
+
+#signup {
+    margin-top: 10%;
+    width: 30%;
+}
+
+#usericon {
+    vertical-align: middle;
+}
+
+#name {
+    padding-left: 0.75rem;
+}
+
+#sellGroup {
+    display: flex;
+    justify-content: center;
+}
+
+#sellGroup input {
+    width: 50%;
+    float: right;
+}
+
+#profit {
+    color: green;
+}
+
+#loss {
+    color: red;
+}
+
+#nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.level {
+    padding: 1.75rem 0px;
+}
+#clock {
+    margin-top: 0.9px;
+    color: black;
+    font-size: 16px;
+}
