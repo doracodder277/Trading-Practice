@@ -34,11 +34,6 @@ The App uses a [Mongo database](https://docs.mongodb.com/v3.2/administration/ins
 
 To add a feature request just create an issue.
 
-The v1 of this project was made when I just started out learning React, so it has lots of bugs and some core features didn't work properly(blame decimal alegbra in JavaScript)
-
-To improve on all of it, I have made a v2 which is just more stable and better and with good practices. I have used TypeScript in React for the first time and really liked it, having static checking goes a long way in development process.
-
-**For all the participants of OpenCode, I just want to tell you that this project might be a litle daunting given your experience level. You may face many problems in the setup itself, don't get disheartned and leave it in the middle. You may contact me anytime on [Facebook](https://www.facebook.com/jsc3998) and resolve your doubts. If you get stuck or don't know how to solve a particular issue or need some suggestions always feel free to ask me or anyone. Feel free to comment on any issues to get clarification, hint or any doubt you might have.**
 
 Enjoy!!
 
