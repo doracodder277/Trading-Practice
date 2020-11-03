@@ -1,44 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What is Wall Street?
+Wall Street is a virtual stock trading web application made using React. This application intends to help future investors learn the ups and downs of the stock market and build a portfolio of stocks for themselves. Beginning with a sum of **$10,000** you get a chance to get accustomed to the buying and selling of stocks, track your progress over a period of time and make yourself ready to conquer the stock market.
 
-## Available Scripts
+## Why Wall Street?
 
-In the project directory, you can run:
+The stock market has always been considered a risky business, infact, some might even go to the extents of calling these investments as gambles. Wall Street is a Web Application that will prove otherwise. With access to virtual money and a starting sum of **$10,000**, Wall Street will enable you to build your very own portfolio from scratch. Here, you get a chance to learn about how the stock market operates in the real world, find your way through profits and losses and gain a practical hand on experience of this trade business without the risk of stepping into the real stock exchange.  
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+You need to have Node installed on your local machine. [Node](https://nodejs.org/en/)
 
-### `npm test`
+NPM(Node Package Manager is already bundled with Node). You can use yarn as well. Install Yarn from [here](https://yarnpkg.com/lang/en/docs/install/)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the project
 
-### `npm run build`
+```
+yarn/npm install
+yarn/npm start
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Yarn can be replaced by npm. 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The above command will start the frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To start the backend
+```
+cd v2/backend
+yarn/npm install
+yarn/npm start
+```
 
-### `npm run eject`
+The App uses a [Mongo database](https://docs.mongodb.com/v3.2/administration/install-community/) so you will need to start a mongo service first on your local machine or if you don't want local mongo instance you can use [mLab](http://mlab.com). Replace your mLabURI with the local one in v2/backend/models/mongoose-setup.js and put your username and password in a .env file. Sample env file is given backend/.env.sample. Just replace it with your mLab credentials and rename the file to .env
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To add a feature request just create an issue.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The v1 of this project was made when I just started out learning React, so it has lots of bugs and some core features didn't work properly(blame decimal alegbra in JavaScript)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To improve on all of it, I have made a v2 which is just more stable and better and with good practices. I have used TypeScript in React for the first time and really liked it, having static checking goes a long way in development process.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**For all the participants of OpenCode, I just want to tell you that this project might be a litle daunting given your experience level. You may face many problems in the setup itself, don't get disheartned and leave it in the middle. You may contact me anytime on [Facebook](https://www.facebook.com/jsc3998) and resolve your doubts. If you get stuck or don't know how to solve a particular issue or need some suggestions always feel free to ask me or anyone. Feel free to comment on any issues to get clarification, hint or any doubt you might have.**
 
-## Learn More
+Enjoy!!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
