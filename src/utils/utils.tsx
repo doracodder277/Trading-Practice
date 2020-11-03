@@ -11,7 +11,7 @@ const RoundOf = (num: number, roundTo: number): number=> {
 };
 
 const getUpdate = async (symbol: string) => {
-    return await axios.get(`${process.env.REACT_APP_API_URL}/${symbol}/batch?types=quote`)       
+    return await axios.get(`${process.env.REACT_APP_API_URL}/${symbol}/batch?types=quote&token=pk_7ef284b0c47544f7873841337f650127`)       
 }
 
 const getMarketStatus = () => {

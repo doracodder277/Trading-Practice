@@ -39,7 +39,7 @@ class Buy extends React.Component<any, State> {
         }
 
         axios
-            .get(`${process.env.REACT_APP_API_URL}/${String(this.state.symbol).trim()}/batch?types=quote`)
+            .get(`${process.env.REACT_APP_API_URL}/${String(this.state.symbol).trim()}/batch?types=quote&token=pk_7ef284b0c47544f7873841337f650127`)
             .then(data => {
 
                 const shareWorth = RoundOf(data.data.quote.latestPrice * Number(this.state.quantity), 2);

@@ -40,11 +40,11 @@ class View extends React.Component {
 
     getData = () => {
         this.setState({loading: true})
-        axios.
-            get(`${process.env.REACT_APP_API_URL}/${String(this.state.symbol)}/batch?types=quote&token=pk_7ef284b0c47544f7873841337f650127`).
+        axios.get(`${process.env.REACT_APP_API_URL}/${String(this.state.symbol)}/batch?types=quote&token=pk_7ef284b0c47544f7873841337f650127`).
             then(data => {
                 this.setState({quote: data.data.quote, symbol: "", loading: false});
-            }).catch(() => {
+            }).catch((err) => {
+                console.log(err);
                 this.setState({error: "Please check the Stock Symbol again", loading: false})
             })
     }
@@ -79,7 +79,7 @@ class View extends React.Component {
 
     getStockData = () => {
         let stockData = []
-        axios.get(`${process.env.REACT_APP_API_URL}/${this.state.symbol}/chart/1y?chartInterval=10`).then(data => {
+        axios.get(`${process.env.REACT_APP_API_URL}/${this.state.symbol}/chart/1y?chartInterval=10&token=pk_7ef284b0c47544f7873841337f650127`).then(data => {
             data.data.map(item => {
                 let temp = {
                     "date": item.date,
