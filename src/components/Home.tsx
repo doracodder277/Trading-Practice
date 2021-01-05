@@ -18,7 +18,6 @@ interface PassedProps {
 	},
 	portfolio: any,
 	refresh: any,
-	addToMoney: any
 }
 
 class Home extends React.Component <PassedProps> {
@@ -26,29 +25,6 @@ class Home extends React.Component <PassedProps> {
 	state = {
 		intervalId: null,
 		statusInterval: null
-	}
-	
-	componentDidMount() {
-		if(sessionStorage.getItem("status") === "OPEN") {
-			clearInterval(this.state.statusInterval)
-		}
-		let statusInterval = setInterval(() => getMarketStatus(), 10000)
-		let interval = setInterval(this.update, 2000);
-		this.setState({intervalId: interval, statusInterval});
-	}
-
-	componentDidUpdate(prevProps) {
-		if(JSON.stringify(this.props.portfolio) !== JSON.stringify(prevProps.portfolio)) {
-			this.props.portfolio.map(item => {
-				axios.patch(`${process.env.REACT_APP_BACKEND_URL}/state/company`, item, {headers: {"x-auth": sessionStorage.getItem("JWT_Token")}}).then(() => {
-				})
-			})
-		}
-	}
-
-	componentWillUnmount() {
-		clearInterval(this.state.intervalId);
-		clearInterval(this.state.statusInterval)
 	}
 
 	update = () => {
@@ -87,8 +63,6 @@ class Home extends React.Component <PassedProps> {
 							<th>Quantity</th>
 							<th>BuyPrice</th>
 							<th>CurrentPrice</th>
-							<th>ShareWorth</th>
-							<th>ProfitLoss</th>
 							<th>Sell Button</th>
 						</tr>
 					</thead>
@@ -116,26 +90,6 @@ class Home extends React.Component <PassedProps> {
 	};
 };
 
-const mapStateToProps = state => {
-	return {
-			money: state.money,
-			portfolio: state.portfolio
-	};
-};
-
-const mapDisptachToProps = (dispatch) => {
-	return {
-			refresh: ({id, companyDetails}) => {
-					dispatch(Refresh({id, companyDetails}));
-			},
-			addToMoney: (value) => {
-					dispatch(SellAction(value));
-			},
-			subtractFromMoney: (value) => {
-					dispatch(BuyAction(value));
-			}
-	}
-}
 
 export default connect(mapStateToProps, mapDisptachToProps)(Home);
 
