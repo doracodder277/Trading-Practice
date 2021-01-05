@@ -44,23 +44,7 @@ router.patch("/money", authenticate, (req, res) => {
     })
 })
 
-router.delete("/money", authenticate, (req, res) => {
-    Money.deleteOne({_creator: req.user._id})
-        .then(data => {
-        res.send(data);
-    })
-    .catch(err => {
-        res.send(err);
-    });
-});
 
-router.get("/company", authenticate, (req, res) => {
-    Portfolio.find({_creator: req.user._id}).then(data => {
-        res.send(data)
-    }).catch(err => {
-        res.send(err)
-    })
-})
 
 router.post("/company", authenticate, (req, res) => {
     const company = _.pick(req.body, ["company", "companyName", "quantity", "buyPrice", "currPrice", "shareWorth", "profitLoss"])
